@@ -8,7 +8,8 @@
 <!-- badges: end -->
 
 The goal of summary.stats is to produce a text ready summary of a
-numeric vector with summary statistics.
+numeric vector with summary statistics, and to plot the distribution of
+a numeric variable of interest. It contains the function sum.stats.
 
 ## Installation
 
@@ -25,15 +26,30 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(summary.stats)
-sum_stats(c(1:100))
-#> [1] "the mean is: 50.5 the median is: 50.5 , the interquartile range is: 49.5 , the standard deviation is: 29.011491975882 ."
+library(gapminder)
+sum_stats(gapminder, gapminder$lifeExp)
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
+
+    #> [1] "For the provided data, the mean is: 59.47 the median is: 60.71 , the interquartile range is: 22.65 , and the standard deviation is: 12.92 . Plots generated. Check them out to view the distribution of the variable of interest"
 
 This package is special because it produces a string in text format
-which is easy to incorporate into a sentence.
+which is easy to incorporate into a sentence, and quickly visualizes
+data distribution.
 
 ``` r
-test_1 <- sample(seq(from = 1, to = 100, by = 2), size = 50, replace = TRUE)
-sum_stats(test_1)
-#> [1] "the mean is: 52.08 the median is: 55 , the interquartile range is: 42 , the standard deviation is: 27.5272332686845 ."
+library(palmerpenguins)
+sum_stats(penguins, penguins$bill_length_mm)
+#> Warning: Removed 2 rows containing non-finite values (stat_density).
+#> Warning: Removed 2 rows containing non-finite values (stat_boxplot).
 ```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+    #> [1] "For the provided data, the mean is: 43.92 the median is: 44.45 , the interquartile range is: 9.27 , and the standard deviation is: 5.46 . Plots generated. Check them out to view the distribution of the variable of interest"
+    sum_stats(penguins, penguins$year)
+
+<img src="man/figures/README-unnamed-chunk-2-2.png" width="100%" />
+
+    #> [1] "For the provided data, the mean is: 2008.03 the median is: 2008 , the interquartile range is: 2 , and the standard deviation is: 0.82 . Plots generated. Check them out to view the distribution of the variable of interest"

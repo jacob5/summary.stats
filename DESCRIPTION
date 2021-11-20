@@ -1,5 +1,5 @@
 Package: summary.stats
-Title: Produces a string of summary statistics for a numeric vector
+Title: Describes a numeric vector quickly
 Version: 0.1.0
 Authors@R: 
     person(given = "Jacob",

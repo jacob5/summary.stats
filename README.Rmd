@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics, and to plot the distribution of a numeric variable of interest. It contains the function sum.stats. 
+The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics, and to plot the distribution of a numeric variable of interest. It contains the function sum.stats.  
 
 ## Installation
 
