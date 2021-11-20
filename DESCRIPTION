@@ -6,7 +6,9 @@ Authors@R:
            family = "Hutton",
            role = c("aut", "cre"),
            email = "jacob.hutton@ubc.ca")
-Description: The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics.
+Description: The goal of summary.stats is to produce a text ready summary of a 
+     numeric vector with summary statistics, as well as plots describing the 
+     distribution of a numeric variable of interest.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,8 +17,13 @@ RoxygenNote: 7.1.2
 Suggests: 
     knitr,
     rmarkdown,
-    stats,
     qpdf,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+Imports: 
+    palmerpenguins,
+    gapminder,
+    ggplot2,
+    stats,
+    cowplot

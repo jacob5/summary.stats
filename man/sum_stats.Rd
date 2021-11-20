@@ -4,18 +4,20 @@
 \alias{sum_stats}
 \title{Summarize the input}
 \usage{
-sum_stats(x)
+sum_stats(data, x)
 }
 \arguments{
-\item{x}{A vector containing a distribution of real numbers}
+\item{data}{a data frame containing one or more columns}
+
+\item{x}{A column containing numeric observations for a variable}
 }
 \value{
-A string containing the summary statistics of interest
+A string containing the summary statistics of interest, diagnostic plots describing the variable distribution
 }
 \description{
 Summarize the input
 }
 \examples{
-sum_stats(c(1:10))
-sum_stats(c(1:100))
+sum_stats(gapminder::gapminder, gapminder::gapminder$lifeExp)
+sum_stats(palmerpenguins::penguins, palmerpenguins::penguins$bill_length_mm)
 }

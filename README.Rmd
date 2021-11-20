@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics. It contains the function sum.stats. 
+The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics, and to plot the distribution of a numeric variable of interest. It contains the function sum.stats. 
 
 ## Installation
 
@@ -34,13 +34,15 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(summary.stats)
-sum_stats(c(1:100))
+library(gapminder)
+sum_stats(gapminder, gapminder$lifeExp)
 ```
 
-This package is special because it produces a string in text format which is easy to incorporate into a sentence. 
+This package is special because it produces a string in text format which is easy to incorporate into a sentence, and quickly visualizes data distribution. 
 
 ```{r}
-test_1 <- sample(seq(from = 1, to = 100, by = 2), size = 50, replace = TRUE)
-sum_stats(test_1)
+library(palmerpenguins)
+sum_stats(penguins, penguins$bill_length_mm)
+sum_stats(penguins, penguins$year)
 ```
 
