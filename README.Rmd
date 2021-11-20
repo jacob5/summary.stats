@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics.
+The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics. It contains the function sum.stats. 
 
 ## Installation
 
@@ -43,5 +43,4 @@ This package is special because it produces a string in text format which is eas
 test_1 <- sample(seq(from = 1, to = 100, by = 2), size = 50, replace = TRUE)
 sum_stats(test_1)
 ```
-
 
