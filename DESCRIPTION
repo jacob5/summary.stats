@@ -27,3 +27,5 @@ Imports:
     ggplot2,
     stats,
     cowplot
+Depends: 
+    R (>= 2.10)
