@@ -1,0 +1,45 @@
+---
+title: "How to use sum_stats"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use sum_stats}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(summary.stats)
+```
+The goal of summary.stats is to produce a text ready summary of a numeric vector with summary statistics.
+
+## Installation
+
+summary.stats is not yet on CRAN. But, you can download it from this repository using the following R command: 
+
+``` r
+devtools::install_github("jacob5/summary.stats")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(summary.stats)
+sum_stats(c(1:100))
+```
+
+This package is special because it produces a string in text format which is easy to incorporate into a sentence. 
+
+```{r}
+test_1 <- sample(seq(from = 1, to = 100, by = 2), size = 50, replace = TRUE)
+sum_stats(test_1)
+```
+
