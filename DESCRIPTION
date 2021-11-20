@@ -1,5 +1,5 @@
 Package: summary.stats
-Title: Produces a string of summary statistics for a numeric vector.
+Title: Produces a string of summary statistics for a numeric vector
 Version: 0.1.0
 Authors@R: 
     person(given = "Jacob",
@@ -15,6 +15,8 @@ RoxygenNote: 7.1.2
 Suggests: 
     knitr,
     rmarkdown,
+    stats,
+    qpdf,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
